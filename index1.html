@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <meta charset="utf-8" />
+        <title>Pure HTML5 file upload | Script Tutorials</title>
+        <link href="main.css" rel="stylesheet" type="text/css" />
+        <script src="script.js"></script>
+
+	<style>
+		header {
+    		padding: 1em;
+    		color: white;
+    		background-color: black;
+    		clear: left;
+    		text-align: center;
+		}
+		
+			
+	</style>
+    </head>
+    <body>
+        <header>
+            <h1 style="color:Tomato;font-size:50px;">NSFW Content Detection</h1>
+        </header>
+        <div class="container">
+            <div class="contr"><h2 style="color:Yellow;">SELECT AN IMAGE AND A MODEL </h2></div>
+
+            <div class="upload_form_cont">
+                <form id="upload_form" enctype="multipart/form-data" method="post" action="save_file.py">
+                    <div>
+                        <div><label for="filename"><h3>Please select an image file</h3></label></div><br>
+                        <div><input type="file" name="filename" id="filename" autocomplete="off" onchange="fileSelected();" /></div><br>
+			
+                    </div>
+                    
+			<div><label for="filename"><h3>Select a Neural Network for content detection</h3></label></div><br>
+			<div><h2><input type = "radio" name = "subject" value = "SEQUENTIAL" /> SEQUENTIAL</h2>
+			<h2><input type = "radio" name = "subject" value = "U-NET" /> U-NET</h2>
+			<h2><input type = "radio" name = "subject" value = "BOTH" /> BOTH</h2></div><br>
+			
+                        <input type="submit" value="Upload"" />
+                    
+                    <div class="fileinfo" >
+                        <div id="filename"></div>
+                        <div id="filesize"></div>
+                        <div id="filetype"></div>
+                        <div id="filedim"></div>
+                    </div>
+                    <div id="error">You should select valid image files only!</div>
+                    <div id="error2">An error occurred while uploading the file</div>
+                    <div id="abort">The upload has been canceled by the user or the browser dropped the connection</div>
+                    <div id="warnsize">Your file is very big. We can't accept it. Please select more small file</div>
+
+                    <div id="progress_info">
+                        <div id="progress"></div>
+                        <div id="progress_percent">&nbsp;</div>
+                        <div class="clear_both"></div>
+                        <div>
+                            <div id="speed">&nbsp;</div>
+                            <div id="remaining">&nbsp;</div>
+                            <div id="b_transfered">&nbsp;</div>
+                            <div class="clear_both"></div>
+                        </div>
+                        <div id="upload_response"></div>
+                    </div>
+			
+                </form>
+
+                <img width="200px" id="preview" />
+            </div>
+        </div>
+    </body>
+</html>

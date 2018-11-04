@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <meta charset="utf-8" />
+        <title>Pure HTML5 file upload | Script Tutorials</title>
+        <link href="main.css" rel="stylesheet" type="text/css" />
+        
+
+	<style>
+		header {
+    		padding: 1em;
+    		color: white;
+    		background-color: black;
+    		clear: left;
+    		text-align: center;
+		}
+		
+			
+	</style>
+    </head>
+    <body>
+        <header>
+            <h1 style="color:Tomato;font-size:50px;">NSFW Content Detection</h1>
+        </header>
+        <div class="container">
+            <div class="contr"><h2 style="color:Yellow;">Select an image and a model </h2></div>
+
+            <div class="upload_form_cont">
+                <form id="upload_form" enctype="multipart/form-data" method="post" >
+                    <div>
+                        <div><button type="submit" formaction="/index1.html">IMAGE</button></div><br>
+                        <div><button type="submit" formaction="/viv.html">VIDEO</button></div><br>
+			
+                    </div>
+                    
+			
+			
+                </form>
+
+                
+            </div>
+        </div>
+    </body>
+</html>

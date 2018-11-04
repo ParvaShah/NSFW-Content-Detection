@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <meta charset="utf-8" />
+       <link href="main.css" rel="stylesheet" type="text/css" />
+
+	<style>
+		header {
+    		padding: 1em;
+    		color: white;
+    		background-color: black;
+    		clear: left;
+    		text-align: center;
+		}
+		
+			
+	</style>
+    </head>
+    <body>
+        <header>
+            <h1 style="color:Tomato;font-size:50px;">NSFW Content Detection</h1>
+        </header>
+        <div class="container" >
+            <div class="contr"><h2 style="color:Yellow;">SELECT A VIDEO AND A MODEL </h2></div>
+
+            <div class="upload_form_cont">
+                <form id="upload_form" enctype="multipart/form-data" method="post" action="viv.py">
+                    <div>
+                        <div><label for="filename"><h3>Please select video file</h3></label></div><br>
+                        <div><input type="file" name="filename" id="filename" autocomplete="off"  /></div><br>
+			
+                    </div>
+                    
+			<div><label for="filename"><h3 >Select a Neural Network for content detection</h3></label></div><br>
+			<div><h2><input type = "radio" name = "subject" value = "SEQUENTIAL" /> SEQUENTIAL</h2>
+			<h2><input type = "radio" name = "subject" value = "U-NET" /> U-NET</h2>
+			<h2><input type = "radio" name = "subject" value = "BOTH" /> BOTH</h2></div><br>
+                        <input type="submit" value="Upload"" />
+                    
+                   
+			
+                </form>
+
+                
+            </div>
+        </div>
+    </body>
+</html>
